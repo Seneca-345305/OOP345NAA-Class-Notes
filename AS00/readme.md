@@ -465,7 +465,7 @@ This video demonstrates how to create a console application using Xcode on a Mac
 
 Follow the instructions, but when creating the project, make sure it is created inside your cloned repository from GitHub.
 
-Name the C++ file `w0.cpp` and write the proper code to produce the following output:
+Name the C++ file `a0.cpp` and write the proper code to produce the following output:
 
 ### Expected Output
 
@@ -520,12 +520,12 @@ Commit and push the file to GitHub. Then, pull it to Matrix and submit it follow
 > For full mark, on-time submission must be done from you lab computer at Seneca
 
 ```bash
-~profname.proflastname/submit 345/a0/lab <ENTER>
+~profname.proflastname/submit 345/asgn0 <ENTER>
 ```
 
 ### Reflection Submission
 ```bash
-~profname.proflastname/submit 345/a0/ref <ENTER>
+~profname.proflastname/submit 345/asgn0_ref <ENTER>
 ```
 
 ### submission options
