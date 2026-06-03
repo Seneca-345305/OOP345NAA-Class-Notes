@@ -24,7 +24,7 @@ int getInt(IntValidation& isValid);
 
 
 auto main() -> int {
-   IsAdult isAdult();
+   IsAdult isAdult{};
    cout << "Enter your age:\n> ";
    int age = getInt(isAdult);
    cout << "age: " << age << endl;
