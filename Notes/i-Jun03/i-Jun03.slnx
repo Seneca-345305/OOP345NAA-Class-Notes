@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="i-Jun03.vcxproj" />
+  <Project Path="Int4Lamba/Int4Lamba.vcxproj" />
+  <Project Path="int4LambdaCaptureRef/int4LambdaCaptureRef.vcxproj" />
+  <Project Path="Int6Exception/Int6Exception.vcxproj" />
+</Solution>
