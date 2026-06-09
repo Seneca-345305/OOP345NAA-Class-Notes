@@ -1,5 +1,3 @@
-Here is the polished final student-facing version.
-
 # OOP345 Lab — Passing Logic to Functions
 
 ## Topic
