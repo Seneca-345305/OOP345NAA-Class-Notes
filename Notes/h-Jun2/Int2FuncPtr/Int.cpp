@@ -29,6 +29,9 @@ auto Int::get(istream& istr)->istream& {
 auto Int::put(ostream& ostr) const->ostream& {
    return ostr << m_value;
 }
+Int::operator int() const {
+   return m_value;
+}
 auto operator<<(ostream& ostr, const Int& I)->ostream& {
    return I.put(ostr);
 }

@@ -25,9 +25,11 @@ bool validMark(int val, string& errorMessage) {
 
 
 int main() {
+   int myval;
    Int val(0, validateAge) ;
    cout << "Age please: ";
    cin >> val;
+   myval = val;
    cout << "Good you are " << val << " years old, what would you like to drink?" << endl;
    cout << "................................." << endl;
    val.set(validMark);

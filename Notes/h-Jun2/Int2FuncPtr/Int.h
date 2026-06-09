@@ -12,6 +12,7 @@ public:
    void set(auto (*validationLogicAddress)(int val, std::string& messageOut) -> bool);
    auto get(std::istream& istr)->std::istream&;
    auto put(std::ostream& ostr) const->std::ostream&;
+   operator int()const;
 };
 std::ostream& operator<<(std::ostream& ostr, const Int& I);
 std::istream& operator>>(std::istream& istr, Int& I);
