@@ -1,0 +1,6 @@
+These are the entities we use to structure programs :
+  values, variables, objects, references, functions, types, class members, templates, and namespaces.
+Quote from Scott Meyers(2005) :
+   “Prefer the compiler to the pre - processor.”
+
+This advice means : trust the compiler’s features(like const, inline, and templates) rather than relying on old preprocessor tricks(#define).The compiler is safer, type - aware, and can help catch errors early.
