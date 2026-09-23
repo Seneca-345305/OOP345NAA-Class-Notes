@@ -1,10 +1,16 @@
 #pragma once
+
+#include <stddef.h>
+
 #ifndef SENECA_INTARRAY_H
 #define SENECA_INTARRAY_H
+
 namespace seneca {
    class IntArray {
       int* m_elements{};
       size_t m_size{};
+
+      void setEls(size_t size, const int* vals = nullptr);
    public:
       IntArray() = default;
       IntArray(size_t size);
@@ -22,6 +28,6 @@ namespace seneca {
       virtual ~IntArray();
    };
 }
-#endif // !SENENCA_INTARRAY_H
+#endif // !SENECA_INTARRAY_H
 
 

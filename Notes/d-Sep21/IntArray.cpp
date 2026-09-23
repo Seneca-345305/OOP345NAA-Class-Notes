@@ -1,26 +1,28 @@
 #include "IntArray.h"
+
 namespace seneca {
-   IntArray::IntArray(size_t size) {
+
+  void IntArray::setEls(size_t size, const int* vals) {
       if (size) {
-         m_elements = new int[m_size = size] {};
+        m_elements = new int[m_size = size]{};
+
+        if (vals) {
+          for (size_t i = 0; i < size; i++) {
+            m_elements[i] = vals[i];
+          }
+        }
       }
+  }
+
+   IntArray::IntArray(size_t size) {
+      setEls(size);
    }
    IntArray::IntArray(const int vals[], size_t size) {
-      if (size && vals) {
-         m_elements = new int[m_size = size];
-         for (size_t i = 0; i < size; i++) {
-            m_elements[i] = vals[i];
-         }
-      }
+      setEls(size, vals);
    }
 
    IntArray::IntArray(const IntArray& other) {
-      if (other.size() && other.m_elements) {
-         m_elements = new int[m_size = other.m_size];
-         for (size_t i = 0; i < m_size; i++) {
-            m_elements[i] = other.m_elements[i];
-         }
-      }
+      setEls(other.m_size, other.m_elements);
    }
 
    IntArray::IntArray(IntArray&& other) noexcept{
@@ -32,12 +34,8 @@ namespace seneca {
 
    IntArray& IntArray::operator=(const IntArray& other) {
       setEmpty();
-      if (other.size() && other.m_elements) {
-         m_elements = new int[m_size = other.m_size];
-         for (size_t i = 0; i < m_size; i++) {
-            m_elements[i] = other.m_elements[i];
-         }
-      }
+      setEls(other.m_size, other.m_elements);
+
       return *this;
    }
 
