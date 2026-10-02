@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Aggregation/Aggregation.vcxproj" />
+  <Project Path="f-Oct02.vcxproj" />
+</Solution>
