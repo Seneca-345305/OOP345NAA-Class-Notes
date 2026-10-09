@@ -1,0 +1,13 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="h-Oct09.vcxproj" Id="b144b5a8-c015-4031-a2ec-9ee9b1cd8e12" />
+  <Project Path="Int1/Int1.vcxproj" Id="81f8c4ae-b70c-4ee9-999b-5c5f49a1ad87" />
+  <Project Path="Int2FuncPtr/Int2FuncPtr.vcxproj" Id="64996ef0-3cc9-4610-a065-7c5ea085341a" />
+  <Project Path="Int3Functor/Int3Functor.vcxproj" Id="fa81aadf-eacf-4f1c-b809-5da2d5b9b33d" />
+  <Project Path="Int4Lamba/Int4Lamba.vcxproj" Id="c397a33e-9e6c-4b90-b168-b7454515543e" />
+  <Project Path="int4LambdaCaptureRef/int4LambdaCaptureRef.vcxproj" Id="46bda486-45da-4e71-827d-15ff365c9fd7" />
+  <Project Path="Int6Exception/Int6Exception.vcxproj" Id="0955cd74-893b-4064-a290-ea4d9d94f3a7" />
+</Solution>
