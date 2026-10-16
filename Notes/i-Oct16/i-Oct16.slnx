@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="i-Oct16.vcxproj" />
+  <Project Path="Int6Exception/Int6Exception.vcxproj" />
+</Solution>
