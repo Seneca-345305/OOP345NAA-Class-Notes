@@ -56,7 +56,7 @@ ostream& DEmployee::print(ostream& os)const {
    return os << name << "," << empno << "," << fixed << setprecision(2) << salary;
 }
 bool DEmployee::write(std::ofstream& ofs, ofstream& nfs) const {
-   // nfs.seekp(0, ios::end);// I think this should be her
+   nfs.seekp(0, ios::end);// I think this should be here
    std::streampos nameLoc = nfs.tellp();
    size_t nameLen = strlen(name);
    nfs.write(name, nameLen); 

@@ -1,33 +1,34 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include "Employee.h"
+#include "DEmployee.h"
 using namespace std;
-bool showRec(int row, ifstream& F) {
-   Employee E;
-   F.clear();
-   F.seekg(0);
-   int i;
-   for (i = 0; F && i < row; i++) {
-      F >> E;
-   }
-   if (F) {
-      cout << i << ": " << E << endl;
+// row must get fixed
+bool showRec(int row, ifstream& ofs, ifstream& nfs) {
+   DEmployee E;
+   bool res{};
+   ofs.clear();
+   nfs.clear();
+   ofs.seekg(row * (sizeof(E) + sizeof(std::streampos) + sizeof(size_t)));
+   if(E.read(ofs, nfs)){
+      cout << row << ": " << E << endl;
+      res = true;
    }
    else {
       cout << "End of file was reached!" << endl;
    }
-   return bool(F);
+   return res;
 }
 int main() {
-   Employee E;
+   DEmployee E;
    int i = 0;
-   ifstream file("employee.txt");
-   while (file >> E) {
+   ifstream ofs("d_employee.bin", ios::binary);
+   ifstream nfs("d_name.bin", ios::binary);
+   while (E.read(ofs, nfs)) {
       cout << (++i) << ": " << E << endl;
    }
    cout << "===============================" << endl;
-   showRec(10, file);
-   showRec(100, file);
+   showRec(10, ofs, nfs);
+   showRec(100, ofs, nfs);
    return 0;
 }

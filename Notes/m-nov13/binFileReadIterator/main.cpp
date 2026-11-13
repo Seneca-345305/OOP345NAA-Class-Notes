@@ -1,18 +1,23 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <algorithm>
 #include "BEmployee.h"
 using namespace std;
 int main() {
-   ifstream file("bemployee.bin", ios::binary);
-   BEmployee E;
-   file.seekg(sizeof(E) * 3);
-   //file.read(reinterpret_cast<char*>(&E), sizeof(E));
-   E.read(file);
-   cout << E << endl;
-   file.seekg(-static_cast<streamoff>(sizeof(E)), ios::end);
-   //file.read(reinterpret_cast<char*>(&E), sizeof(E));
-   E.read(file);
-   cout << E << endl;
+   int i = 1;
+   ifstream file("employee.bin", ios::binary);
+   istream_iterator<BEmployee> ii{ file };
+   istream_iterator<BEmployee> eos{};
+   vector<BEmployee> emp{ ii,eos };
+   for (auto& e : emp) {
+      cout << i++ << ": " << e << endl;
+   }
+   sort(emp.begin(), emp.end());
+   cout << "---------------------------------" << endl;
+   i = 1;
+   for (auto& e : emp) {
+      cout << i++ << ": " << e << endl;
+   }
    return 0;
 }
